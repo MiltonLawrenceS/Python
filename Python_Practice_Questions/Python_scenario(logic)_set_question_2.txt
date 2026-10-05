@@ -1,0 +1,153 @@
+1.Scenario:You are developing a banking application that categorizes transactions based on the amount entered.
+ Write logic to determine whether the amount is positive, negative, or zero.
+
+1.start
+2.Get the amount as an input from the user
+3.check if amount < 0 then
+4.Return as "Negative"
+5.check if amount == 0 then
+6.Return as "Zero"
+7.check if amount > 0 then
+8.Return as "Positive"
+9.Return the output based on conditions
+10.stop
+
+2.Scenario: A digital locker requires users to enter a numerical passcode. As part of a security feature, the system checks the sum of the digits of the passcode.
+ Write logic to compute the sum of the digits of a given number.
+
+1.start
+2.Get the numerical passcode as an input from the user(2116)
+3.create a variable count or total as 0 for future calculation
+4.We do not use for loop instead we use while loop
+5.use modulus 10 to get last digit of the number and store the number in a new variable called last_digit
+6.Add the last_digit to the variable total as total+=last_digit
+7.To remove the last digit use divides 10 to get the remaining values and gets final sum
+8.Repeat the step 6 several times untill it divides all values
+9.Return the total variable at last(10)
+10.stop
+
+3.Scenario: A mobile payment app uses a simple checksum validation where reversing a transaction ID helps detect fraud.
+ Write logic to take a number and return its reverse.
+
+1.start
+2.Get the number as an input from the user(1234)
+3.create a variable reversed_value as 0 for future calculation
+4.We do not use for loop instead we use while loop
+5.use modulus 10 to get last digit of the number and store the number in a new variable called remainder
+6.create a variable cube to calculate remainder ** 3
+7.Then store the cube value in new variable final 
+6.Code the logic as reversed_value = remainder + reversed_value * 10
+7.To remove the last digit use divides 10 to get the remaining values
+8.Repeat the step 6 several times untill it divides all values and gets reversed
+9.Return the reversed_value variable at last(4321)
+10.stop
+
+
+4.Scenario: In a secure login system, certain features are enabled only for users with prime-numbered user IDs.
+ Write logic to check if a given number is prime.
+
+1.start
+2.get the number as an input from the user
+3.check if number < 0 then
+4.Return "Not a prime"
+5.use the flag method as "Prime = True"
+6.Otherwise make a loop to check the condition for loop as (2,number)
+7.check if number % n == 0 then
+8.Set "Prime = False" Otherwise
+9.Set "Prime = True"
+10.Finally check if Prime == True then
+11.Return "Prime"
+12.else then
+13.Return "Not a prime"
+14.Return the output based on the conditions
+15.stop
+
+5.Scenario: A scientist is working on permutations and needs to calculate the factorial of numbers frequently.
+ Write logic to find the factorial of a given number using recursion.
+
+1.start
+2.get the number as an input from the user
+3.Using function and it's name is fact(function name) to calculate recursion input send as an parameter
+4.check if number == 0  or number == 1then
+5.Return as 1
+6.else use recursion calling itself and return as n * fact (n-1) 
+7.stop
+
+6.Scenario: A unique lottery system assigns ticket numbers where only Armstrong numbers win the jackpot.
+ Write logic to check whether a given number is an Armstrong number.
+1.start
+2.get the number as an input from the user
+3.create a variable temp for store the actual number from the user
+4.Use th while loop then
+5.use modulus 10 to get last digit of the number and store the number in a new variable called remainder
+6.create a variable cube to calculate remainder ** 3
+7.Then store the cube value in new variable final 
+8.To remove the last digit use divides 10 to get the remaining values
+9.Return the final value
+10.stop
+
+7.Scenario: A password manager needs to strengthen weak passwords by swapping the first and last characters of user-generated passwords.
+             Write logic to perform this operation on a given string.
+
+1.start
+2.Get the password form the user as an input
+3.create an variable with empty string 
+4.check if len(password) > 1 then
+5.Assign last element to the reult as result += password[len(password)-1]
+6.Make a for loop with condition (1,len(password)-1) then
+7.Then assign the first element to the final variable at last
+8.Return the final elements
+9.stop
+
+8.Scenario: A low-level networking application requires decimal numbers to be converted into binary format before transmission.
+ Write logic to convert a given decimal number into its binary equivalent.
+
+1.start
+2.Get the number form the user as an input
+3.create an variable large with empty string 
+4.Make a while loop with condition 0 < number then
+5.use modulus 2 to get last digit of the number and store the number in a new variable called remainder
+6.Add the remainder to the variable binary as binary = str(remainder) + binary then
+7.Return the binary value
+8.stop
+
+9.Scenario: A text-processing tool helps summarize articles by identifying the most significant words.
+ Write logic to find the longest word in a sentence.
+
+1.start
+2.Get the text form the user as an input and use split()
+3.create an variable large and stores first element 
+4.Make a for loop then
+5.check if len(text[i]) > len(large) then
+6.Update large = text[i] 
+7.Return the large variable
+8.stop
+
+10.	Scenario: A plagiarism detection tool compares words from different documents and checks if they are anagrams (same characters but different order).
+ Write logic to check whether two given strings are anagrams.
+
+1.start
+2.Get the two strings from the user as an input
+3.check if strings length are equal otherwise 
+4.Return "Not a Anagram"
+5.else then
+6.create a dict name as need
+7.Make a for loop and run only one string because it's already has same lvl of length
+8.create two variable as char1 and char2 then assign both as string1[i] and string2[i]
+9.check if char1 in need then
+10.Assign need[char]+=1
+11.else then 
+12.Assign need[char]=1
+13.check if char2 in need then
+14.Assign need[char]-=1
+15.else then
+16.Assign need[char]=-1
+17.Set the Flag variable as "is_Anagram = True"
+18.Make another for loop then
+19.check if need[value] !=0 then
+20.Set "is_Anagram = False"
+21.Then Finally check if is_Anagram == True then
+22.Return "Anagram"
+23.else then
+24.Return "Not a Anagram"
+25.stop
