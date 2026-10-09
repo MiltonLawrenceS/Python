@@ -1,0 +1,146 @@
+1.Scenario: A user is required to enter a valid number in a form, but users sometimes input invalid data.
+ Write logic to repeatedly prompt the user until they enter a valid integer
+
+1.start
+2.Get the user valid number as an input
+3.check if an input is invalid number then
+4.Using while loop to shows enter a valid integer untill they enter valid number
+5.else then
+6.Proceed to next step
+7.stop
+
+2.Scenario: A data analysis tool processes a list of numbers and needs to identify the most frequently occurring value.
+ Write logic to find the most frequently occurring number in a given list.
+
+1.start
+2.create a dictionary dataset variable as need for future use
+3.use for loop for iterate the lists numbers
+4.check if val (iterate each element) in lists then
+5.Store the list value as need[val]+=1
+6.else then
+7.store the list value as need[val]=1
+8.Thse step can find the occurence times in a list
+9.For dictionary we use value as incremental so we use max function to check the most occuring value in list
+10.print the most occuring number in the list
+11.stop
+
+3.Scenario: A text-processing application needs to compare words and check if they are anagrams (contain the same letters in a different order).
+ Write logic to determine whether two given strings are anagrams.
+
+1.start
+2.create a dictionary variable need 
+3.First check the both strings can have same length if the length is mismatch then 
+4.Return "Not a anagram"
+5.Take the two strings and store them as string1 and string2
+6.Make a for loop for one string because they both have same length
+7.check if string1[i] in need then
+8.store the value as need[string1[i]]+=1
+9.else then
+10.store the value as need[string1[i]]=1
+11.Also check if if string2[i] in need then
+12.store the value as need[string1[i]]-=1
+13.else then 
+14.store the value as need[string1[i]]=-1
+15.so now check both string length is 0
+16.if both string length is 0 then
+17.Return "Anagram"
+18.else then
+19.Return "Not a Anagram"
+20.stop
+
+4.Scenario: A speech analysis program needs to count the number of vowel sounds in a given input.
+ Write logic to count the number of vowels in a given string.
+
+1.start
+2.Get the input from the user 
+3.create a variable count and set as 0 
+4.create a variable vowels and store the vowels as "aeiou"
+5.Make a for loop and temp variable as val for iterate the input
+6.check if val in vowels then
+7.increment the count based on vowels present in the input
+8.print the count
+9.stop
+
+5.Scenario: A text-editing software includes a feature to reverse the order of words in a sentence for stylistic effects.
+ Write logic to reverse the order of words in a sentence while keeping the words themselves intact.
+
+1.start
+2.Get the string of word from user as an input
+3.create a variable reversed_word for future use
+4.Make a for loop to iterate a each letter in user input and iterate by using temp variable as val
+5.After starting the iteration the logic is reversed_word = val + reversed_word
+6.This can reversed the word one by one
+7.print the reversed word
+8.stop
+
+6.Scenario: A missing number is detected in a sequence of values stored in a database.
+ Write logic to find the missing number in a list containing n-1 numbers from 1 to n.
+
+1.start
+2.Calculate the total length of the list
+3.Add 1 to the previous length of the list because given question has n-1 
+4.create a variable final and store the logic of main thing is n*(n+1)//2 for finding total number of sum including missing number
+5.create a variable total and store 0
+6.Make a for loop to iterate the list and count the sum of numbers
+7.Finally return = final - total
+8.Return the result
+9.stop
+
+7.Scenario: An ATM machine processes withdrawal requests and needs to ensure that users cannot withdraw more than their account balance.
+ Write logic to allow a withdrawal only if the balance is sufficient.
+
+1.start
+2.Here we use file handing method to save the current balance after withdrawl
+3.Get the amount as an input from the user
+4.Open the current balance with read mode in file handling and store in new variable as balamce it used to take the value directly from the file and used to withdrawl or changes
+5.Check if balance > amount then
+6.Use write mode in file handling,it used to save current balance after withdrawl
+7.create a variable current_balance and stores the logic as current_balance = balance - amount
+8.Return the current_balance
+9.else then
+10.Return "Sorry you have not sufficient balance to withdrawl"
+11.stop
+
+8.Scenario: A system needs to verify whether a given dataset contains duplicate entries.
+ Write logic to check whether a given list contains duplicate values.
+
+1.start
+2.Make a for loop for itearte one by one element and temp value as i
+3.Make another for loop for check one element by every element and temp value as j
+4.check if arr[i] == arr[j] then
+5.return any one value to see the duplicates arr[i] or arr[j]
+6.else then
+7.Just proceed to next step because there i no duplicate values in the lsit
+8.stop
+
+9.Scenario: A digital calculator includes a feature to sum the digits of a number for verification purposes.
+ Write logic to calculate the sum of all digits in a given integer.
+
+1.start
+2.Store the digits of numbers in an variable digits
+3.create a variable total and set as 0
+4.Make a While loop because int is not iterable for "for loop"
+5.Take the last digit and store the last digit in new variable remainder
+6.Now make a logic total+=remainder
+7.To remove the last digit and make a loop with remaining numbers 
+8.Make several times the step 5 and step 6 for sum the digits
+9.Return the total value
+10.stop
+
+10.Scenario: A language-learning app wants to verify whether a given sentence is a pangram (contains every letter of the alphabet at least once).
+ Write logic to check if a given sentence is a pangram.
+
+1.start
+2.store the sentence in a variable as text and covert the text as lower
+3.create a set and store in a variable result
+4.create a variable checking and store all the alphabets character a-z
+5.Make a for loop to iterate the elemnts from text and the temp variable in for loop is "i"
+6.check if i in checking then
+7.Add the corresponding values to the set
+8.Then check if len(result) == 26 then
+9.Return "Pangram"
+10.else then
+11.Return "Not a pangram"
+12.stop
+
+
